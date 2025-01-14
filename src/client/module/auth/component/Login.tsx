@@ -11,12 +11,10 @@ function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle login logic here
     mutate({
       email,
       password
     })
-    console.log('Login attempt:', { email, password });
   };
 
   return (
@@ -65,9 +63,9 @@ function LoginPage() {
           </form>
           
           <div className="mt-6">
-            <a href="#" className="text-sm text-purple-600 hover:text-purple-700">
+            <Link to="/forgot-password" className="text-sm text-purple-600 hover:text-purple-700">
               Forgot Password?
-            </a>
+            </Link>
           </div>
           
           <div className="mt-8 pt-6 border-t border-gray-200">
